@@ -38,6 +38,11 @@ a:hover, button:hover{
     cursor: pointer;
     opacity: .6;
 }
+.free_image{
+    width: 0px;
+    height: 0px;
+    position: relative;
+}
 
 .dnone{
     display: none;
