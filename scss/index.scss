@@ -1,0 +1,150 @@
+@import 'null';
+
+.container{
+    width: 320px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    row-gap: 30px;
+    justify-content: center;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    button{
+        width: 131px;
+        height: 42px;
+        border-radius: 26px;
+        background: #FF6A12;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        font-size: 29px;
+        text-transform: uppercase;
+    }
+    button:last-child{
+        background: #42C624;
+    }
+}
+body{
+    background: linear-gradient(180deg, #0F147D 0%, #000058 50%, #0C1178 100%);
+    min-height: 100vh;
+}
+
+.header{
+    width: 280px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    .orange{
+        color: #FF6A13;
+        font-size: 47px;
+    }
+}
+
+#wheel:hover{
+    cursor: pointer;
+}
+#spinner{
+    transform: rotate(135deg);
+    transform-origin: center;
+}
+.spin{
+    animation: 
+    // spin_animation_1 2s ease-in forwards, 
+    // spin_animation_2 2s 2s linear forwards, 
+    // spin_animation_3 5s 4s cubic-bezier(0.12, 0.58, 0.34, 1.17) forwards
+    spin_animation_3 50s cubic-bezier(0.12, 0.58, 0.34, 1.17) forwards
+}
+// 2оборота - 18тиков
+@keyframes spin_animation_1 {
+    0%{
+        transform: rotate(135deg);
+    }
+    100%{
+        transform: rotate(855deg);
+    }
+}
+// 3оборота - 27 тиков
+@keyframes spin_animation_2 {
+    0%{
+        transform: rotate(855deg);
+    }
+    100%{
+        transform: rotate(1935deg);
+    }
+}
+// меньше 2оборотов - 15 тиков
+@keyframes spin_animation_3 {
+    0%{
+        transform: rotate(1935deg);
+    }
+    100%{
+        transform: rotate(2532deg);
+    }
+}
+
+#selector{
+    // transform: rotate(2deg);
+    transform-origin: top;
+}
+.selector_spin{
+    animation: 
+    // selector_spin_animation_1 0.3s   0.25s  ease-out forwards, 
+    // selector_spin_animation_1 0.28s  0.5s    ease-out forwards, 
+    // selector_spin_animation_1 0.26s  0.66s  ease-out forwards, 
+    // selector_spin_animation_1 0.25s  0.805s ease-out forwards, 
+    // selector_spin_animation_1 0.24s  0.925s ease-out forwards, 
+    // selector_spin_animation_1 0.23s  1.05s ease-out forwards, 
+    // selector_spin_animation_1 0.22s  1.15s ease-out forwards, 
+    // selector_spin_animation_1 0.21s  1.26s ease-out forwards, 
+    // selector_spin_animation_1 0.2s   1.36s ease-out forwards, 
+    // selector_spin_animation_1 0.2s   1.46s ease-out forwards, 
+    // selector_spin_animation_1 0.2s   1.54s ease-out forwards, 
+    // selector_spin_animation_1 0.2s   1.63s ease-out forwards, 
+    // selector_spin_animation_1 0.2s   1.72s ease-out forwards, 
+    // selector_spin_animation_1 0.2s   1.79s ease-out forwards, 
+    // selector_spin_animation_1 0.2s   1.88s ease-out forwards, 
+    // selector_spin_animation_1 0.2s   1.95s ease-out forwards, 
+    // selector_spin_animation_1 0.0832s 24 1.995s ease-out forwards, 
+    selector_spin_animation_1 2s 0.3s ease-out forwards, 
+    selector_spin_animation_1 2s 1.2s ease-out forwards, 
+    selector_spin_animation_1 2s 2.1s ease-out forwards, 
+    selector_spin_animation_1 2.1s 3.1s ease-out forwards, 
+    selector_spin_animation_1 2.1s 4.2s ease-out forwards, 
+    selector_spin_animation_1 2.1s 5.4s ease-out forwards, 
+    selector_spin_animation_1 2.1s 6.7s ease-out forwards, 
+    selector_spin_animation_1 2.1s 8.3s ease-out forwards, 
+    selector_spin_animation_1 2.2s 10.2s ease-out forwards, 
+    selector_spin_animation_1 2.3s 12.4s ease-out forwards, 
+    selector_spin_animation_1 2.5s 14.8s ease-out forwards, 
+    selector_spin_animation_1 2.8s 18.5s ease-out forwards, 
+    selector_spin_animation_1 3.2s 23s ease-out forwards, 
+    selector_spin_animation_2 20s 31s ease-in-out forwards, 
+}
+@keyframes selector_spin_animation_1 {
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes selector_spin_animation_2 {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
